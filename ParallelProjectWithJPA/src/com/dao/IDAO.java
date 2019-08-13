@@ -1,10 +1,12 @@
 package com.dao;
 
-import com.bean.Details;
+import java.util.List;
+
+import com.bean.UserDetails;
 
 public interface IDAO {
 
-	int createAccount(Details ud);
+	int createAccount(UserDetails ud);
 
 	double showBalance(int accNo);
 
@@ -12,6 +14,9 @@ public interface IDAO {
 
 	double withdrawBalance(int accNo, double balance);
 
+	double fundTransfer(int accNo, int accNo1, double balance);
+
+	List<?> printTransactions(int accNo);
 
 
 
